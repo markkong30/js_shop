@@ -19,35 +19,35 @@
               <tr>
                 <td class="name">Salmon</td>
                 <td>$<span class="price">60.00</span></td>
-                <td class="quantity">QTY <input type="number" value="2" /></td>
+                <td class="quantity">QTY <input type="number" min="0" /></td>
                 <td><button class="btn btn-sm btn-dark remove">Remove</button></td>
                 <td>$<span class="subtotal">--.--</span></td>
               </tr>
               <tr>
                 <td class="name">Tuna</td>
                 <td>$<span class="price">50.00</span></td>
-                <td class="quantity">QTY <input type="number" value="5" /></td>
+                <td class="quantity">QTY <input type="number" min="0" /></td>
                 <td><button class="btn btn-sm btn-dark remove">Remove</button></td>
                 <td>$<span class="subtotal">--.--</span></td>
               </tr>
               <tr>
                 <td class="name">Carp</td>
                 <td>$<span class="price">40.00</span></td>
-                <td class="quantity">QTY <input type="number" value="3" /></td>
+                <td class="quantity">QTY <input type="number" min="0" /></td>
                 <td><button class="btn btn-sm btn-dark remove">Remove</button></td>
                 <td>$<span class="subtotal">--.--</span></td>
               </tr>
               <tr>
                 <td class="name">Pork</td>
                 <td>$<span class="price">50.00</span></td>
-                <td class="quantity">QTY <input type="number" value="4" /></td>
+                <td class="quantity">QTY <input type="number" min="0" /></td>
                 <td><button class="btn btn-sm btn-dark remove">Remove</button></td>
                 <td>$<span class="subtotal">--.--</span></td>
               </tr>
               <tr>
                 <td class="name">Beef</td>
                 <td>$<span class="price">40.00</span></td>
-                <td class="quantity">QTY <input type="number" value="3" /></td>
+                <td class="quantity">QTY <input type="number" min="0" /></td>
                 <td><button class="btn btn-sm btn-dark remove">Remove</button></td>
                 <td>$<span class="subtotal">--.--</span></td>
               </tr>
@@ -55,14 +55,14 @@
           </table>
         </div>
 
-        <div class="col-12" id="addItem">
-          <input id='addName' type="text" placeholder="Apple" />
-          <input id='addPrice' type='number' placeholder='Price' />
-          <input id='addQty' type="number" placeholder="QTY" />
-          <button class="btn btn-sm add">Add</button>
-        </div>
+        <form class="col-12 py-2" id="addItem">
+          <input class="mx-2" id='addName' type="text" placeholder="Apple" required/>
+          <input class="mx-2" id='addPrice' type='number' step="0.01" min="0" placeholder='Price' required />
+          <input class="mx-2" id='addQty' type="number" min="0" placeholder="QTY" />
+          <button class="mx-2 btn btn-sm add btn-primary">Add</button>
+        </form>
 
-        <div class="col-12">
+        <div class="col-12 pt-4">
           <h1>Total Price: $<span id="totalDisplay">--.--</span></h1>
         </div>
   </body>
