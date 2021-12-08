@@ -10,10 +10,15 @@
     <script src="./js/application.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center my-4">Shopping Cart</h1>
-      <div class="row">
+    <div class="container-fluid">
+      <div class="img position-fixed">
+      </div>
+     
+      <div class="row justify-content-center">
         <div class="col-12">
+          <h1 class="text-center my-4">Shopping Cart</h1>
+        </div>
+        <div class="col-12 col-md-8">
           <table class="table">
             <tbody>
               <tr>
@@ -54,17 +59,21 @@
             </tbody>
           </table>
         </div>
-
-        <form class="col-12 py-2" id="addItem">
+        
+        
+        <form class="col-12 col-md-8 py-2" id="addItem">
           <input class="mx-2" id='addName' type="text" placeholder="Apple" required/>
           <input class="mx-2" id='addPrice' type='number' step="0.01" min="0" placeholder='Price' required />
           <input class="mx-2" id='addQty' type="number" min="0" placeholder="QTY" />
           <button class="mx-2 btn btn-sm add btn-primary">Add</button>
         </form>
+        
 
-        <div class="col-12 pt-4">
+        <div class="col-12 col-md-8 pt-4">
           <h1>Total Price: $<span id="totalDisplay">--.--</span></h1>
         </div>
+      </div>
+    </div>
   </body>
 </html>
 

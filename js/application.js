@@ -46,8 +46,6 @@ var addContent = function () {
 
 
 
-
-
 $(document).ready(function () {
   updateTotal();
 
@@ -63,6 +61,7 @@ $(document).ready(function () {
   $('body').on('submit', '#addItem', function (event) {
     event.preventDefault();
     $('tbody').prepend(addContent());
+    $('#addItem').trigger('reset');
     updateTotal();
   });
 });
